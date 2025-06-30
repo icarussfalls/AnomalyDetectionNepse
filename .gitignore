@@ -1,0 +1,8 @@
+.venv
+.ipynb_checkpoints
+company_list.json
+*.db
+*.ipynb
+s.py
+__pycache__/
+s.py
