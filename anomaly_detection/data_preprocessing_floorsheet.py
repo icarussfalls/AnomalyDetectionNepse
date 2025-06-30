@@ -10,10 +10,10 @@ broker_numbers = [entry["brk_num"] for entry in data]
 
 # connect to the floorsheet database
 import sqlite3
-conn = sqlite3.connect("/Users/icarus/Downloads/floorsheet_database.db")
-cursor = conn.cursor()
+# conn = sqlite3.connect("/Users/icarus/Downloads/floorsheet_database.db")
+# cursor = conn.cursor()
 
-def data_per_stock(stock_name, start_date, end_date):
+def data_per_stock(conn, stock_name, start_date, end_date):
     query = """
         SELECT * FROM floorsheet
         WHERE Symbol = ?
