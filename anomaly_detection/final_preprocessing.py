@@ -24,7 +24,7 @@ def extract_features(row, db_path):
     return None
 
 if __name__ == "__main__":
-    db_path = "/kaggle/input/your_database.sqlite"  # or wherever your DB is on Kaggle
+    db_path = "/kaggle/input/floorsheet-sqlite/floorsheet_database.db"  # db path on kaggle
     rows = [row for _, row in date_windows.iterrows()]
     extract_func = partial(extract_features, db_path=db_path)
     with Pool(processes=cpu_count()) as pool:
